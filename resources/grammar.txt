@@ -1,0 +1,19 @@
+<expr> ::= <sumterm>{('-' | '+')<sumterm>} | <func> = expr
+<sumterm> ::= <multerm>{('*' | '/')<multerm>}
+<multerm> ::= <powterm>**<powterm> | -<multerm> | +<multerm>
+<powterm> ::= '('expr')' | <number> | <val> | <func>
+<number> ::= '[[:number:]]'
+<val> ::= '[[:alpha:]]' [=<expr>]
+<func> ::= '[[:alpha:]]''(' {val} ')' [=<expr>]
+
+
+1 + 1 + 1
+term + exp
+term + term + exp
+term + term + term
+term + term + number
+term + term + number
+term + number + number
+term + number
+number + number
+number

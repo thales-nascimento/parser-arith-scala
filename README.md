@@ -1,1 +1,2 @@
-# parser-arith-scala
+# um parser aritmético
+feito em scala, just for fun
